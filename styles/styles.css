@@ -49,13 +49,16 @@ button {
     gap: 80px;
 
 }
-
+.wrapper-bg {
+    background-color: rgba(1, 10, 32, 1);
+}
 .beaches {
     width: 100%;
     max-height: 871px;
     background:
-        linear-gradient(to bottom, rgba(1, 10, 32, 1), rgba(1, 10, 32, 0.6)),
-        url('/images/bg-sect-2.2.jpg');
+
+        linear-gradient(to bottom, rgba(1, 10, 32, 1), rgba(1, 10, 32, 0)),
+        url('/images/321.png');
 }
 
 .image {
@@ -104,12 +107,20 @@ button {
 
 .explore {
     background: url('/images/bg-sect-3.jpg');
-    background-size: contain;
+    background-size: cover;
     background-position: center top;
     background-repeat: no-repeat;
     width: 100%;
     height: 2208px;
 }
+
+
+@media screen and (max-width: 768px) {
+    .explore {
+        background-position: center -400px;
+    }
+}
+
 
 .explore h1 {
     font-size: 40px;
