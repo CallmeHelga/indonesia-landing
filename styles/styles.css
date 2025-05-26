@@ -1,0 +1,234 @@
+/*
+.roboto-<uniquifier> {
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+.dm-sans-<uniquifier> {
+  font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+} */
+button {
+
+    cursor: pointer;
+    border: none;
+    color: white;
+}
+
+.hidden {
+    display: none;
+}
+
+.bg {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.walkways {
+    width: 100%;
+    max-height: 771px;
+    background:
+        linear-gradient(to top, rgba(1, 10, 32, 1), rgba(1, 10, 32, 0.7)),
+        url('/images/bg-sect-2.1.jpg');
+}
+
+.content {
+    display: flex;
+    max-height: 580px;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 80px;
+    gap: 80px;
+
+}
+
+.beaches {
+    width: 100%;
+    max-height: 871px;
+    background:
+        linear-gradient(to bottom, rgba(1, 10, 32, 1), rgba(1, 10, 32, 0.6)),
+        url('/images/bg-sect-2.2.jpg');
+}
+
+.image {
+    max-width: 450px;
+    border-radius: 10px;
+}
+
+.image img {
+    border-radius: 10px;
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.text-content {
+    max-width: 450px;
+}
+
+.text-content h2 {
+    font-family: "DM Sans", sans-serif;
+    font-weight: 700;
+    color: white;
+    font-size: 42px;
+}
+
+.text-content p,
+.full-text p {
+    font-family: "DM Sans", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    letter-spacing: 1%;
+    color: white;
+    padding: 25px 0 25px 0;
+}
+
+.btn {
+    padding: 20px;
+    background-color: #DD2242;
+    font-size: 18px;
+    width: 180px;
+    border-radius: 40px;
+    text-align: center;
+}
+
+/* Page no 3 */
+
+.explore {
+    background: url('/images/bg-sect-3.jpg');
+    background-size: contain;
+    background-position: center top;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 2208px;
+}
+
+.explore h1 {
+    font-size: 40px;
+    font-family: "DM Sans", sans-serif;
+    font-weight: 700;
+    padding-top: 1.5em;
+    text-align: center;
+}
+
+.slider-container {
+    position: relative;
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 20px;
+    padding: 30px 17px 60px;
+}
+
+.slider-track {
+    display: flex;
+    transition: transform 0.5s ease;
+    gap: 20px;
+}
+
+.slide {
+    min-width: calc((100% - 40px) / 3);
+    border-radius: 15px;
+    object-fit: cover;
+}
+
+.arrow-left,
+.arrow-right {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.7rem;
+    background: none;
+    border: none;
+    color: #1a1a1a;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.arrow-left {
+    left: -7px;
+}
+
+.arrow-right {
+    right: -7px;
+}
+
+.dots {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.dot {
+    height: 12px;
+    width: 12px;
+    margin: 0 5px;
+    background-color: #a2b5c0;
+    border-radius: 50%;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.dot.active {
+    background-color: #dd2242;
+    border-radius: 20px;
+    width: 28px;
+}
+
+.by_the_numbers {
+    position: relative;
+    background-color: rgba(2, 12, 33, 1);
+    opacity: 0.5;
+    max-height: 794px;
+    top: 63em;
+}
+
+.numbers-wrapper {
+    color: white;
+}
+
+@media(max-width: 768px) {
+
+    .walkways,
+    .beaches,
+    .content {
+        max-height: none;
+        height: auto;
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    .beaches>.content .image {
+        padding-top: 0;
+    }
+
+    .content {
+        flex-direction: column;
+        position: relative;
+    }
+
+
+    .beaches>.content .image {
+        order: 1;
+    }
+
+    .beaches>.content .text-content {
+        order: 2;
+
+    }
+
+    .btn {
+        width: 100%;
+        display: block;
+    }
+
+
+}
