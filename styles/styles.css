@@ -14,6 +14,11 @@
   font-weight: <weight>;
   font-style: normal;
 } */
+
+body {
+    width: 100%;
+}
+
 button {
 
     cursor: pointer;
@@ -27,42 +32,47 @@ button {
 
 .bg {
     background-size: cover;
-    background-position: center;
+    background-position: center top;
     background-repeat: no-repeat;
 }
 
 .walkways {
     width: 100%;
-    max-height: 771px;
-    background:
-        linear-gradient(to top, rgba(1, 10, 32, 1), rgba(1, 10, 32, 0.7)),
-        url('/images/bg-sect-2.1.jpg');
+    height: auto;
+    background-image: url('/images/bg-sect-2.1.png');
+    background-color: rgba(1, 10, 32, 0.9);
+
+}
+
+.walkways .content {
+    background: linear-gradient(rgba(1, 10, 32, 0), rgba(1, 10, 32, 1));
+    padding: 200px 0 80px 0;
 }
 
 .content {
     display: flex;
-    max-height: 580px;
+    height: auto;
     justify-content: center;
     align-items: center;
     margin: 0 auto;
-    padding: 80px;
-    gap: 80px;
-
+    gap: 113px;
 }
 .wrapper-bg {
     background-color: rgba(1, 10, 32, 1);
 }
 .beaches {
     width: 100%;
-    max-height: 871px;
-    background:
+    background-image: url('/images/bg-sect-2.2.png');
+    background-color: rgba(1, 10, 32, 0.9);
+}
 
-        linear-gradient(to bottom, rgba(1, 10, 32, 1), rgba(1, 10, 32, 0)),
-        url('/images/321.png');
+.beaches .content {
+    padding: 80px 0 200px 0;
+    background: linear-gradient(rgba(1, 10, 32, 1), rgba(1, 10, 32, 0));
 }
 
 .image {
-    max-width: 450px;
+    max-width: 630px;
     border-radius: 10px;
 }
 
@@ -103,37 +113,33 @@ button {
     text-align: center;
 }
 
-/* Page no 3 */
+/* Page 4 */
+
+.hills_container {
+    background-image: url();
+}
 
 .explore {
     background: url('/images/bg-sect-3.jpg');
     background-size: cover;
-    background-position: center top;
+    background-position: center;
     background-repeat: no-repeat;
     width: 100%;
     height: 2208px;
 }
 
-
-@media screen and (max-width: 768px) {
-    .explore {
-        background-position: center -400px;
-    }
-}
-
-
 .explore h1 {
-    font-size: 40px;
+    font-size: 50px;
     font-family: "DM Sans", sans-serif;
     font-weight: 700;
+    line-height: 150%;
     padding-top: 1.5em;
     text-align: center;
 }
 
 .slider-container {
     position: relative;
-    width: 90%;
-    max-width: 1100px;
+    width: 70%;
     margin: 0 auto;
     overflow: hidden;
     border-radius: 20px;
@@ -143,11 +149,11 @@ button {
 .slider-track {
     display: flex;
     transition: transform 0.5s ease;
-    gap: 20px;
+    gap: 40px;
 }
 
 .slide {
-    min-width: calc((100% - 40px) / 3);
+    min-width: calc((100% - 80px) / 3);
     border-radius: 15px;
     object-fit: cover;
 }
@@ -195,26 +201,257 @@ button {
 }
 
 .by_the_numbers {
+    display: flex;
+    justify-content: center;
     position: relative;
     background-color: rgba(2, 12, 33, 1);
-    opacity: 0.5;
+    opacity: 0.9;
     max-height: 794px;
-    top: 63em;
+    top: 59em;
+    padding-bottom: 9rem;
 }
 
 .numbers-wrapper {
     color: white;
+    max-width: 80rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.by_the_numbers h3 {
+    font-size: 60px;
+    text-align: center;
+    font-family: DM Sans;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+.by_the_numbers p {
+    font-family: DM Sans;
+    font-weight: 400;
+    font-size: 18px;
+
+}
+
+.by_the_numbers-first {
+    text-align: center;
+    margin-top: 180px;
+    width: 100%;
+    max-width: 30.25rem;
+    margin-bottom: 4rem;
+}
+
+.by_the_numbers-second {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2.5rem;
+    text-align: center;
+    padding-bottom: 1.6rem;
+}
+
+.by_the_numbers-second>div {
+    max-width: 23rem;
+}
+
+.by_the_numbers-second h4 {
+    font-family: DM Sans;
+    font-weight: 700;
+    font-size: 42.14px;
+    color: rgba(221, 34, 66, 1);
+    padding-bottom: 2rem;
+}
+
+/* Page 4 */
+
+.hills_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+    background-color: white;
+}
+
+.hills_content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 15em;
+    padding-bottom: 15em;
+    width: 38.3rem;
+    position: relative;
+    z-index: 1;
+}
+
+.hills_content h3 {
+    font-family: DM Sans;
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 50px;
+    padding-bottom: 2rem;
+    text-align: center;
+}
+
+.hills_text {
+    width: 29.3rem;
+    padding-bottom: 2rem;
+}
+
+.hills_content p {
+    font-family: DM Sans;
+    text-align: center;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: 0.5%;
+    color: rgba(111, 119, 135, 1);
+}
+
+.hills_container::before,
+.hills_container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    height: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.hills_container::before {
+    width: 100%;
+    left: 0;
+    background-image: url('/images/bg-sect-4.1.png');
+}
+
+.hills_container::after {
+    width: 37%;
+    right: 0;
+    background-position: right bottom;
+    background-image: url('/images/bg-sect-4.2.png');
+}
+
+/* Page 5 */
+
+.video_container {
+    background: url('/images/bg-sect-5.png');
+    background-color: rgba(2, 12, 33, 23.5);
+    width: 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.video_content {
+    width: 1056px;
+    height: 100vh;
+}
+
+.video_content h3 {
+    text-align: center;
+    color: white;
+    font-family: DM Sans;
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 50px;
+    padding: 73px 0;
+
+}
+
+/* Page 6 */
+
+.gallery_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.gallery_container h2 {
+    font-family: DM Sans;
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 150%;
+    padding-top: 5vw;
+    padding-bottom: 2vw;
+}
+
+.gallery_container p {
+    font-family: DM Sans;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: 1%;
+    color: rgba(111, 119, 135, 1);
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 200px;
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding-top: 3vw;
+    padding-bottom: 5vw;
+}
+
+.photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.photo6 {
+    grid-column: 1 / 2;
+    grid-row: 1 / span 2;
+}
+
+.photo5 {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
+
+.photo4 {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+}
+
+.photo3 {
+    grid-column: 2 / 3;
+    grid-row: 2 / span 2;
+}
+
+.photo2 {
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+}
+
+.photo1 {
+    grid-column: 3 / 4;
+    grid-row: 2 / span 2;
 }
 
 @media(max-width: 768px) {
+
+    /* Page 2 */
 
     .walkways,
     .beaches,
     .content {
         max-height: none;
         height: auto;
-        padding-top: 40px;
-        padding-bottom: 40px;
+
     }
 
     .beaches>.content .image {
@@ -224,6 +461,18 @@ button {
     .content {
         flex-direction: column;
         position: relative;
+    }
+
+    .text-content h2 {
+        font-size: 40px;
+        line-height: 46px;
+    }
+
+    .text-content p,
+    .full-text p {
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 0.5px;
     }
 
 
@@ -239,6 +488,56 @@ button {
     .btn {
         width: 100%;
         display: block;
+    }
+
+    /* Page 3 */
+
+    .explore h1 {
+        font-size: 40px;
+        line-height: 46px;
+        text-align: center;
+    }
+
+    .slide {
+        min-width: 100%;
+    }
+
+    .slider-track {
+        gap: 20px;
+    }
+
+    .numbers-wrapper {
+        max-width: 83em;
+    }
+
+    .by_the_numbers {
+        top: 53em;
+        max-height: none;
+    }
+
+    .by_the_numbers-first {
+        margin-top: 61px;
+    }
+
+    /* Page 4 */
+
+    .hills_content h3 {
+        font-size: 40px;
+
+    }
+
+    .hills_content {
+        padding: 80px 60px;
+
+    }
+
+    .hills_container::before {
+        background-image: url('/images/bg-sect-4.1-media.png');
+        background-position: top;
+    }
+
+    .hills_container::after {
+        background-image: url('/images/bg-sect-4.2-media.png');
     }
 
 
