@@ -2,7 +2,9 @@ const buttons = document.querySelectorAll('.btn button')
 
 
 buttons.forEach((button) => {
-    button.addEventListener("click", function () {
+    button.addEventListener("click", function (event) {
+        event.stopPropagation();
+        event.preventDefault();
         let container = button.closest('.text-content') || button.closest('.hills_content');
 
         if (!container) return;
@@ -78,7 +80,9 @@ const bigImg = bigPreview.querySelector('img')
 const smallVideos = document.querySelectorAll('.small-video')
 
 smallVideos.forEach(small => {
-    small.addEventListener('click', () => {
+    small.addEventListener('click', (event) => {
+        event.stopPropagation();
+        event.preventDefault();
         const bigVideoLink = bigPreview.dataset.video;
         const bigVideoImg = bigImg.src;
         const smallVideoLink = small.dataset.video;
@@ -87,15 +91,13 @@ smallVideos.forEach(small => {
         bigImg.src = smallVideoImg;
         small.dataset.video = bigVideoLink;
         small.querySelector('img').src = bigVideoImg;
-        const newVideo = bigPreview.dataset.video;
-        window.open(newVideo)
     })
 })
 
 const playButton = bigPreview.querySelector('.play-button')
-playButton.addEventListener('click', () => {
+playButton.addEventListener('click', (event) => {
+    event.preventDefault();
     const videoLink = bigPreview.dataset.video;
-    window.open(videoLink);
 })
 // Buttons "show more" in media, Page 7
 
