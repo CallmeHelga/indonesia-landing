@@ -70,3 +70,64 @@ dots.forEach((dot, index) => {
 });
 
 updateSlider();
+
+// Videos
+
+const bigPreview = document.querySelector('.big-video-preview');
+const bigImg = bigPreview.querySelector('img')
+const smallVideos = document.querySelectorAll('.small-video')
+
+smallVideos.forEach(small => {
+    small.addEventListener('click', () => {
+        const bigVideoLink = bigPreview.dataset.video;
+        const bigVideoImg = bigImg.src;
+        const smallVideoLink = small.dataset.video;
+        const smallVideoImg = small.querySelector('img').src;
+        bigPreview.dataset.video = smallVideoLink;
+        bigImg.src = smallVideoImg;
+        small.dataset.video = bigVideoLink;
+        small.querySelector('img').src = bigVideoImg;
+        const newVideo = bigPreview.dataset.video;
+        window.open(newVideo)
+    })
+})
+
+const playButton = bigPreview.querySelector('.play-button')
+playButton.addEventListener('click', () => {
+    const videoLink = bigPreview.dataset.video;
+    window.open(videoLink);
+})
+// Buttons "show more" in media, Page 7
+
+const paragraph = document.querySelectorAll('.dynamic-text');
+const toggleButtons = document.querySelectorAll('.toggle-text');
+
+paragraph.forEach((paragraph, index) => {
+    const toggleBtn = toggleButtons[index];
+    const fullText = paragraph.textContent.trim();
+    const words = fullText.split(' ');
+    const previewText = words.slice(0, 3).join(' ') + '...';
+
+    let isFull = false;
+    paragraph.textContent = previewText;
+
+    toggleBtn.addEventListener('click', () => {
+        if (isFull) {
+            paragraph.textContent = previewText;
+            toggleBtn.textContent = 'Show more'
+        } else {
+            paragraph.textContent = fullText;
+            toggleBtn.textContent = 'Show less'
+        }
+        isFull = !isFull
+    });
+});
+
+// Scroll-top button
+
+document.querySelector('.scroll-top').addEventListener('click', function () {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+});
