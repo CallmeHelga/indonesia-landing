@@ -133,3 +133,4 @@ document.querySelector('.scroll-top').addEventListener('click', function () {
         behavior: 'smooth'
     });
 });
+

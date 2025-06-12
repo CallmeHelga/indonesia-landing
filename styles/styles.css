@@ -14,6 +14,10 @@
   font-weight: <weight>;
   font-style: normal;
 } */
+* {
+    font-family: "DM Sans", sans-serif;
+    font-weight: 700;
+}
 
 body {
     width: 100%;
@@ -90,18 +94,14 @@ button {
 }
 
 .text-content h2 {
-    font-family: "DM Sans", sans-serif;
-    font-weight: 700;
     color: white;
     font-size: 42px;
 }
 
 .text-content p,
 .full-text p {
-    font-family: "DM Sans", sans-serif;
     font-weight: 400;
     font-size: 18px;
-    letter-spacing: 1%;
     color: white;
     padding: 25px 0 25px 0;
 }
@@ -128,8 +128,6 @@ button {
 
 .explore h1 {
     font-size: 50px;
-    font-family: "DM Sans", sans-serif;
-    font-weight: 700;
     line-height: 150%;
     padding-top: 1.5em;
     text-align: center;
@@ -219,13 +217,10 @@ button {
 .by_the_numbers h3 {
     font-size: 60px;
     text-align: center;
-    font-family: DM Sans;
-    font-weight: 700;
     margin-bottom: 1.5rem;
 }
 
 .by_the_numbers p {
-    font-family: DM Sans;
     font-weight: 400;
     font-size: 18px;
 
@@ -253,8 +248,6 @@ button {
 }
 
 .by_the_numbers-second h4 {
-    font-family: DM Sans;
-    font-weight: 700;
     font-size: 42.14px;
     color: rgba(221, 34, 66, 1);
     padding-bottom: 2rem;
@@ -283,13 +276,10 @@ button {
     padding-top: 15em;
     padding-bottom: 15em;
     width: 38.3rem;
-
     z-index: 1;
 }
 
 .hills_content h3 {
-    font-family: DM Sans;
-    font-weight: 700;
     font-size: 42px;
     line-height: 50px;
     padding-bottom: 2rem;
@@ -302,7 +292,6 @@ button {
 }
 
 .hills_content p {
-    font-family: DM Sans;
     text-align: center;
     font-weight: 400;
     font-size: 18px;
@@ -352,8 +341,6 @@ button {
 
 .video_container h3 {
     color: white;
-    font-family: DM Sans;
-    font-weight: 700;
     font-size: 42px;
     line-height: 50px;
     padding: 10rem 5rem 5rem 5rem;
@@ -381,7 +368,7 @@ button {
 }
 
 .play-button {
-    background: url(/images/video-icon-big.png);
+    background: url('/images/video-icon-big.png');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -418,15 +405,12 @@ button {
 }
 
 .small-info h4 {
-    font-family: DM Sans;
-    font-weight: 700;
     font-size: 18px;
     color: white;
     padding-bottom: 1.5rem;
 }
 
 .small-info p {
-    font-family: DM Sans;
     font-weight: 400;
     font-size: 18px;
     line-height: 28px;
@@ -443,8 +427,6 @@ button {
 }
 
 .gallery_container h2 {
-    font-family: DM Sans;
-    font-weight: 700;
     font-size: 60px;
     line-height: 150%;
     padding-top: 5vw;
@@ -452,7 +434,6 @@ button {
 }
 
 .gallery_container p {
-    font-family: DM Sans;
     font-weight: 400;
     font-size: 18px;
     line-height: 28px;
@@ -520,8 +501,6 @@ button {
 }
 
 .timeline_container h2 {
-    font-family: DM Sans;
-    font-weight: 700;
     font-size: 60px;
     line-height: 150%;
     color: rgba(1, 10, 32, 1);
@@ -553,8 +532,6 @@ button {
 }
 
 .timeline_content h4 {
-    font-family: DM Sans;
-    font-weight: 700;
     font-size: 26.41px;
     line-height: 41.08px;
     margin-left: 3rem;
@@ -562,7 +539,6 @@ button {
 }
 
 .timeline_content p {
-    font-family: DM Sans;
     font-weight: 400;
     font-size: 23.47px;
     line-height: 38.15px;
@@ -670,8 +646,6 @@ button {
 
 .footer_right p,
 .footer_nav a {
-    font-family: DM Sans;
-    font-weight: 700;
     font-size: 18px;
     line-height: 28px;
     letter-spacing: 0.5px;
@@ -736,6 +710,7 @@ button {
         text-align: center;
         padding-top: 2rem;
     }
+
     .small-video img,
     .big-video-preview img {
         width: 100%;
@@ -745,6 +720,7 @@ button {
         max-height: 100%;
         min-width: 250px;
     }
+
     .small-video-wrapper {
         width: 100%;
     }
@@ -752,13 +728,16 @@ button {
     .video_container {
         padding: 0 20px;
     }
+
     .big-video-wrapper {
         width: 100%;
     }
+
     .small-info {
         padding-left: 0;
         padding-top: 10px;
     }
+
     .small-video-wrapper {
         gap: 40px;
         flex-direction: row;
@@ -766,6 +745,7 @@ button {
         justify-content: flex-start;
 
     }
+
     .small-video {
         flex-direction: column;
         width: 100%;
@@ -774,36 +754,13 @@ button {
 
     .small-video img {
         max-height: 216px;
-        width:  100%;
+        width: 100%;
     }
 
 }
 
 
 @media(max-width: 768px) {
-    .walkways .content {
-        padding: 20px;
-        gap: 30px;
-    }
-    .image,
-    .image img,
-    .text-content {
-        max-width: 100%;;
-        width: 100%;
-    }
-    .small-video-wrapper {
-        gap: 40px;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: flex-start;
-
-    }
-
-    .small-video img {
-        max-height: 100%;
-        width:  100%;
-    }
-
 
     /* Page 2 */
 
@@ -812,11 +769,23 @@ button {
     .content {
         max-height: none;
         height: auto;
+    }
 
+    .walkways .content,
+    .beaches .content {
+        padding: 30px;
+        gap: 30px;
     }
 
     .beaches>.content .image {
         padding-top: 0;
+    }
+
+    .image,
+    .image img,
+    .text-content {
+        max-width: 100%;
+        width: 100%;
     }
 
     .content {
@@ -853,10 +822,6 @@ button {
 
     /* Page 3 */
 
-    .explore {
-        background-position: top;
-    }
-
     .explore h1 {
         font-size: 40px;
         line-height: 46px;
@@ -877,6 +842,7 @@ button {
 
     .by_the_numbers {
         margin-top: 200vw;
+        padding-bottom: 7vw;
     }
 
     .by_the_numbers-first {
@@ -891,6 +857,7 @@ button {
 
     .hills_content {
         padding: 50vw 19vw;
+        width: 100%;
     }
 
     .hills_container::before {
@@ -904,6 +871,18 @@ button {
     }
 
     /* Page 5 */
+
+    .small-video-wrapper {
+        gap: 40px;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+
+    .small-video img {
+        max-height: 100%;
+        width: 100%;
+    }
 
     .video_container h3 {
         width: 100%;
@@ -1005,6 +984,10 @@ button {
         text-align: center;
     }
 
+    .timeline_content p {
+        margin-left: 0;
+    }
+
     .circle {
         width: 6rem;
         height: 6rem;
@@ -1083,6 +1066,7 @@ button {
         gap: 20px;
         padding: 20px 0;
     }
+
     .video_container h3 {
         font-size: 24px;
         line-height: 30px;
