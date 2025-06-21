@@ -1073,6 +1073,7 @@ button {
 
     .header {
         position: relative;
+        gap: 5px;
     }
 
     .header-icons {
