@@ -10,14 +10,86 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,100..1000&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <title>Indonesia</title>
 </head>
 
 <body>
     <!--Header-->
 
+    <section class="header_container bg">
+        <div class="header-content">
+            <div class="header-wrapper">
+                <header class="header">
+                    <div class="left_group">
+                        <div class="header_logo"></div>
+
+                        <nav class="nav">
+                            <a href="#destination">DESTINATION</a>
+                            <a href="#experiences">EXPERIENCES</a>
+                            <a href="#about">ABOUT</a>
+                            <a href="#gallery">GALLERY</a>
+                        </nav>
+                    </div>
+
+                    <div class="header-icons">
+                        <button class="search-btn"><i class="fas fa-search"></i></button>
+                        <button class="menu-btn"><i class="fas fa-bars"></i></button>
+                    </div>
+                </header>
+
+                <div class="header_content">
+                    <h1>EXPLORE INDONESIA</h1>
+                    <button class="btn" id="start-btn">Start travelling</button>
+                </div>
+            </div>
+
+            <div class="social-info-wrapper">
+                <div class="social-bar">
+                    <a href="https://www.facebook.com">Fb</a>
+                    <a href="https://www.instagram.com">In</a>
+                    <a href="https://x.com">Tw</a>
+                </div>
+
+                <div class="info-video-wrapper">
+                    <div class="info-cards">
+                        <div class="card">
+                            <div class="card-number">01</div>
+                            <h3>Title here</h3>
+                            <p>Lorem ipsum dolor sit </p>
+                            <p>amet et amet ist ame.</p>
+                        </div>
+                        <div class="card">
+                            <div class="card-number">02</div>
+                            <h3>Title here</h3>
+                            <p>Lorem ipsum dolor sit </p>
+                            <p>amet et amet ist ame.</p>
+                        </div>
+                        <div class="card">
+                            <div class="card-number">03</div>
+                            <h3>Title here</h3>
+                            <p>Lorem ipsum dolor sit </p>
+                            <p>amet et amet ist ame.</p>
+                        </div>
+                    </div>
+
+                    <div class="video-preview" data-video="https://www.youtube.com/watch?v=rkdJHwwG5js">
+                        <img src="images/prewiew-1page.png" alt="Video preview">
+                        <button class="play-button play-button--white">
+                            <span class="arrow"></span>
+                        </button>
+
+                        <div class="iframe-wrapper" style="display: none;">
+                            <iframe src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <!--Page 2-->
-    <section class="walkways bg">
+    <section id="destination" class="walkways bg">
         <div class="content">
             <div class="image">
                 <img src="images/sect-2-block-1.jpg" alt="">
@@ -66,7 +138,7 @@
     </section>
 
     <!--Page 3-->
-    <section class="explore">
+    <section id="about" class="explore">
         <h1>Explore Our Secrets</h1>
         <div class="slider-container">
             <button class="arrow-left">&#10094;</button>
@@ -149,7 +221,7 @@
     </section>
 
     <!--Page 5-->
-    <section class="video_container">
+    <section id="experiences" class="video_container">
         <h3>Live a life like you wouldn't imagine,
             experience a life you wouldn't expect.
         </h3>
@@ -159,6 +231,12 @@
                 <img src="images/video-prev-1.jpg" alt="Main preview">
                 <div class="play-button">
                 </div>
+            </div>
+
+            <div class="iframe-wrapper" style="display: none;">
+                <iframe src="https://www.youtube.com/embed/rkdJHwwG5js?autoplay=1" frameborder="0"
+                    allow="autoplay; encrypted-media" allowfullscreen>
+                </iframe>
             </div>
         </div>
 
@@ -189,7 +267,7 @@
     </section>
 
     <!--Page 6-->
-    <section class="gallery_container">
+    <section id="gallery" class="gallery_container">
         <h2>Photo Gallery</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         <p>Phasellus dapibus mauris in lectus tempus, eget
@@ -206,7 +284,7 @@
     </section>
 
     <!--Page 7-->
-    <section class="timeline_container">
+    <section class="timeline_container" id="start">
         <div class="timeline_wrapper">
             <h2>Getting there</h2>
             <div class="timeline">
