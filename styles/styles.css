@@ -349,8 +349,8 @@ button {
 }
 
 .swiper-pagination-bullet {
-    width: 15px !important;
-    height: 15px !important;
+    width: 11px !important;
+    height: 11px !important;
 }
 
 .swiper-pagination-bullet-active {
@@ -729,7 +729,7 @@ button {
     font-size: 23.47px;
     line-height: 38.15px;
     margin-left: 3rem;
-    color: rgba(21, 20, 57, 0.4);
+    color: rgba(21, 20, 57, 0.648);
 }
 
 .toggle-text {
