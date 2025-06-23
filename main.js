@@ -1,20 +1,3 @@
-const swiper = new Swiper('.swiper', {
-    slidesPerView: 3,
-    spaceBetween: 30,
-    pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-    },
-    // Optional parameters
-
-    loop: true,
-
-    // Navigation arrows
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-    },
-});
 
 const buttons = document.querySelectorAll('.btn button')
 
@@ -77,54 +60,36 @@ document.addEventListener('DOMContentLoaded', () => {
 
 /// Slider
 
-const sliderTrack = document.querySelector('.slider-track');
-const slides = document.querySelectorAll('.slide');
-const dots = document.querySelectorAll('.dot');
-const btnPrev = document.querySelector('.arrow-left');
-const btnNext = document.querySelector('.arrow-right');
+const swiper = new Swiper('.swiper', {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
 
-let currentIndex = 0;
-const totalSlides = slides.length;
+    breakpoints: {
+        0: {
+            slidesPerView: 1,
+            spaceBetween: 10,
+        },
+        768: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+        },
 
-function updateSlider() {
-    const offset = -currentIndex * (slides[0].offsetWidth + 40);
-    sliderTrack.style.transform = `translateX(${offset}px)`;
+    },
 
+    // Optional parameters
+    loop: true,
 
-    dots.forEach(dot => dot.classList.remove('active'));
-    if (dots[currentIndex]) {
-        dots[currentIndex].classList.add('active');
-    }
-
-
-    btnPrev.disabled = currentIndex === 0;
-    btnNext.disabled = currentIndex === totalSlides - 1;
-}
-
-
-btnNext.addEventListener('click', () => {
-    if (currentIndex < totalSlides - 1) {
-        currentIndex++;
-        updateSlider();
-    }
+    // Navigation arrows
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
 });
 
-
-btnPrev.addEventListener('click', () => {
-    if (currentIndex > 0) {
-        currentIndex--;
-        updateSlider();
-    }
-});
-
-dots.forEach((dot, index) => {
-    dot.addEventListener('click', () => {
-        currentIndex = index;
-        updateSlider();
-    });
-});
-
-updateSlider();
 
 // Videos
 
