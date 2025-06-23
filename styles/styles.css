@@ -332,7 +332,6 @@ button {
     position: relative;
     width: 70%;
     margin: 0 auto;
-    overflow: hidden;
     border-radius: 20px;
     padding: 30px 17px 60px;
 }
@@ -902,7 +901,15 @@ button {
 .big-video-preview img {
     border-radius: 10px;
 }
-
+#about .slider-container .swiper-button-prev, .swiper-rtl .swiper-button-next {
+    left: -40px;
+}
+#about .slider-container  .swiper-button-next, .swiper-rtl .swiper-button-prev{
+    right: -40px;
+}
+.swiper-button-prev {
+    left: -40px;
+}
 @media(max-width: 1700px) {
 
     /* Page 1 */
@@ -1078,7 +1085,7 @@ button {
 
     .header-icons {
         padding-left: 20px;
-        width: 100%;
+        width: auto;
     }
 
     .header_content {

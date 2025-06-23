@@ -1,5 +1,22 @@
-const buttons = document.querySelectorAll('.btn button')
+const swiper = new Swiper('.swiper', {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+    // Optional parameters
 
+    loop: true,
+
+    // Navigation arrows
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+});
+
+const buttons = document.querySelectorAll('.btn button')
 
 buttons.forEach((button) => {
     button.addEventListener("click", function (event) {
