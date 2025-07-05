@@ -1031,7 +1031,7 @@ button {
     /* Page 1 */
 
     .header_container {
-        background-image: url(/images/bg-1-mediaPhones.webp);
+        background-image: url('../images/bg-1-mediaPhones.webp');
     }
 
     .nav {
