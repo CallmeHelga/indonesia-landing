@@ -1,4 +1,4 @@
-
+// buttons
 const buttons = document.querySelectorAll('.btn button')
 
 buttons.forEach((button) => {
@@ -58,6 +58,46 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+// First Page Video
+
+function getVideoId(url) {
+    try {
+        const urlObj = new URL(url);
+        return urlObj.searchParams.get('v');
+    } catch (e) {
+        console.error('Invalid video URL:', url);
+        return null;
+    }
+}
+
+function setupFirstPageVideo(container) {
+    const img = container.querySelector('img');
+    const button = container.querySelector('.play-button--white');
+    const iframeWrapper = container.querySelector('.iframe-wrapper');
+    const videoLink = container.dataset.video;
+
+    if (!button || !iframeWrapper || !videoLink) return;
+
+    const videoId = getVideoId(videoLink);
+
+
+    button.addEventListener('click', (e) => {
+        e.preventDefault();
+        img.style.display = 'none';
+        button.style.display = 'none';
+        iframeWrapper.classList.remove('.hidden');
+
+        const iframe = document.createElement('iframe');
+        iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+        iframe.setAttribute('frameborder', '0');
+        iframe.setAttribute('allow', ' autoplay; encrypted-media');
+        iframe.setAttribute('allowfullscreen', '');
+        iframeWrapper.appendChild(iframe);
+    });
+}
+
+document.querySelectorAll('.video-preview').forEach(setupFirstPageVideo);
+
 /// Slider
 
 const swiper = new Swiper('.swiper', {
@@ -93,50 +133,29 @@ const swiper = new Swiper('.swiper', {
 
 // Videos
 
-function getVideoId(url) {
-    const urlObj = new URL(url);
-    return urlObj.searchParams.get('v');
-}
-
-function setupVideoPlayback(container) {
-    if (!container) return;
-
-    const img = container.querySelector('img');
-    const button = container.querySelector('.play-button');
-    const iframeWrapper = container.querySelector('.iframe-wrapper');
-    const iframe = iframeWrapper?.querySelector('iframe');
-    const videoLink = container.dataset.video;
-
-    if (!button || !iframeWrapper || !iframe || !videoLink) return;
-
-    const videoId = getVideoId(videoLink);
-
-    button.addEventListener('click', (event) => {
-        event.preventDefault();
-        if (img) img.style.display = 'none';
-        if (button) button.style.display = 'none';
-        iframeWrapper.style.display = 'block';
-        iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
-    });
-}
-
-document.querySelectorAll('.video-preview').forEach(setupVideoPlayback);
-
 const bigPreview = document.querySelector('.big-video-preview');
 const bigImg = bigPreview.querySelector('img');
 const smallVideos = document.querySelectorAll('.small-video');
-const bigWrapper = document.querySelector('.big-video-wrapper');
+const bigWrapper = document.querySelector('.video--page5 .big-video-wrapper');
 const iframeWrapper = bigWrapper.querySelector('.iframe-wrapper');
-const iframe = iframeWrapper.querySelector('iframe');
 const playButton = bigPreview.querySelector('.play-button');
+
+function createIframe(videoId) {
+    const iframe = document.createElement('iframe');
+    iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+    iframe.setAttribute('frameborder', '0');
+    iframe.setAttribute('allow', 'autoplay; encrypted-media');
+    iframe.setAttribute('allowfullscreen', '');
+    return iframe;
+}
 
 smallVideos.forEach(small => {
     small.addEventListener('click', (event) => {
-        event.stopPropagation();
         event.preventDefault();
 
         const bigVideoLink = bigPreview.dataset.video;
         const bigVideoImg = bigImg.src;
+
         const smallVideoLink = small.dataset.video;
         const smallVideoImg = small.querySelector('img').src;
 
@@ -146,15 +165,27 @@ smallVideos.forEach(small => {
         small.querySelector('img').src = bigVideoImg;
 
         const videoId = getVideoId(smallVideoLink);
-        iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+
+        iframeWrapper.innerHTML = '';
+        const newIframe = createIframe(videoId);
+        iframeWrapper.appendChild(newIframe);
+        iframeWrapper.style.display = 'flex';
+        bigImg.style.display = 'none';
+        playButton.style.display = 'none';
     });
 });
 
 playButton.addEventListener('click', (event) => {
     event.preventDefault();
+
+    const videoId = getVideoId(bigPreview.dataset.video);
+    const newIframe = createIframe(videoId);
+
+    iframeWrapper.innerHTML = '';
+    iframeWrapper.appendChild(newIframe);
+    iframeWrapper.style.display = 'flex';
     bigImg.style.display = 'none';
     playButton.style.display = 'none';
-    iframeWrapper.style.display = 'flex';
 });
 
 // Buttons "show more" in media, Page 7
