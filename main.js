@@ -39,20 +39,17 @@ startBtn.addEventListener('click', (e) => {
 document.addEventListener('DOMContentLoaded', () => {
     const menuBtn = document.querySelector('.menu-btn');
     const nav = document.querySelector('.nav');
-    const menuIcon = menuBtn.querySelector('i');
+    const menuIcon = menuBtn.querySelector('img');
     const headerWrapper = document.querySelector('.header-wrapper');
-
 
     menuBtn.addEventListener('click', () => {
         const isOpen = nav.classList.toggle('nav--active');
 
         if (isOpen) {
-            menuIcon.classList.remove('fa-bars');
-            menuIcon.classList.add('fa-times');
+            menuIcon.src = 'images/close.svg';
             headerWrapper.classList.add('menu-open');
         } else {
-            menuIcon.classList.remove('fa-times');
-            menuIcon.classList.add('fa-bars');
+            menuIcon.src = 'images/burger.svg';
             headerWrapper.classList.remove('menu-open');
         }
     });

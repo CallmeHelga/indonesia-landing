@@ -112,15 +112,6 @@ button {
 .header {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-
-}
-
-.left_group {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 3rem;
 }
 
 .header img {
@@ -140,6 +131,7 @@ button {
     width: 32px;
     height: 32px;
     font-size: 22px;
+    margin-bottom: 22px;
 }
 
 .nav {
@@ -1060,10 +1052,6 @@ button {
         gap: 0;
     }
 
-    /* .header_logo {
-        margin-right: 0;
-    } */
-
     .social-bar {
         display: none;
     }
@@ -1109,6 +1097,12 @@ button {
 
     .menu-btn {
         display: block;
+    }
+
+    .menu-icon {
+        filter: brightness(0) invert(1);
+        width: 24px;
+        height: 24px;
     }
 
     .header {
