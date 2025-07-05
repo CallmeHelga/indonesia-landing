@@ -62,24 +62,22 @@ button {
     gap: 3rem;
 }
 
-.header_logo {
-    background: url('../images/logo-header.webp') no-repeat;
-    width: 200px;
-    height: 60px;
-    margin-right: 4rem;
+.header img {
+    width: 185px;
+    height: 68px;
 }
 
 .menu-btn {
     display: none;
 }
 
-.header-icons {
+/* .header-icons {
     display: flex;
     align-items: center;
     width: 300px;
     gap: 30px;
     padding-right: 30px;
-}
+} */
 
 .header-icons button {
     background: none;
@@ -886,9 +884,9 @@ button {
 
     /* Page 1 */
 
-    .header {
+    /* .header {
         gap: 50px;
-    }
+    } */
 
     .header_content {
         margin-left: 22px;
@@ -1011,9 +1009,9 @@ button {
         gap: 0;
     }
 
-    .header_logo {
+    /* .header_logo {
         margin-right: 0;
-    }
+    } */
 
     .social-bar {
         display: none;
@@ -1031,6 +1029,10 @@ button {
 @media(max-width: 768px) {
 
     /* Page 1 */
+
+    .header_container {
+        background-image: url(/images/bg-1-mediaPhones.webp);
+    }
 
     .nav {
         display: none;
@@ -1060,12 +1062,11 @@ button {
 
     .header {
         position: relative;
-        gap: 5px;
     }
 
-    .header-icons {
-        padding-left: 20px;
-        width: auto;
+    .header img {
+        width: 148px;
+        height: 59px;
     }
 
     .header_content {
